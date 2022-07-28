@@ -232,35 +232,60 @@ def free_play_window():
         pygame.image.save(SCREEN, "Images/screenshot_load_screen.jpg")
         pygame.display.update()
 
-
 def levels_window():
     pygame.display.set_caption("Level Selection")
     BG = pygame.transform.scale(pygame.image.load("Images/Background_images/background.png"),
                                 (1280, 736)).convert_alpha()
+    basecolour0 = "#d7fcd4"
+    basecolour1 =  "#d7fcd4"
+    basecolour2 =  "#d7fcd4"
+    basecolour3 =  "#d7fcd4"
+    basecolour4 =  "#d7fcd4"
+    basecolour5 =  "#d7fcd4"
+    basecolour6 =  "#d7fcd4"
+
+
     while True:
         levels_mouse_pos = pygame.mouse.get_pos()
         SCREEN.blit(BG, (0, 0))
+        if ALLOWED_LEVELS >= 1:
+            basecolour0 = "#009E60"
+        if ALLOWED_LEVELS >= 2:
+            basecolour1 = "#009E60"
+        if ALLOWED_LEVELS >= 3:
+            basecolour2 = "#009E60"
+        if ALLOWED_LEVELS >= 4:
+            basecolour3 = "#009E60"
+        if ALLOWED_LEVELS >= 5:
+            basecolour4 = "#009E60"
+        if ALLOWED_LEVELS >= 6:
+            basecolour5 = "#009E60"
+        if ALLOWED_LEVELS >= 7:
+            basecolour6 = "#009E60"
+
+
+
 
         level1_button = Button(image=pygame.image.load("Images/Rects/Map Rect.png"), pos=(320, 100),
-                               text_input="LeveL 1", font=get_font(75), base_color="#d7fcd4", hovering_color="White")
+                               text_input="LeveL 1", font=get_font(75), base_color=basecolour0, hovering_color="White")
 
         level2_button = Button(image=pygame.image.load("Images/Rects/Map Rect.png"), pos=(320, 250),
-                               text_input="LeveL 2", font=get_font(75), base_color="#d7fcd4", hovering_color="White")
+                               text_input="LeveL 2", font=get_font(75), base_color=basecolour1, hovering_color="White")
 
         level3_button = Button(image=pygame.image.load("Images/Rects/Map Rect.png"), pos=(320, 400),
-                               text_input="LeveL 3", font=get_font(75), base_color="#d7fcd4", hovering_color="White")
+                               text_input="LeveL 3", font=get_font(75), base_color=basecolour2, hovering_color="White")
 
         level4_button = Button(image=pygame.image.load("Images/Rects/Map Rect.png"), pos=(320, 550),
-                               text_input="LeveL 4", font=get_font(75), base_color="#d7fcd4", hovering_color="White")
+                               text_input="LeveL 4", font=get_font(75), base_color=basecolour3, hovering_color="White")
 
         level5_button = Button(image=pygame.image.load("Images/Rects/Map Rect.png"), pos=(950, 100),
-                               text_input="LeveL 5", font=get_font(75), base_color="#d7fcd4", hovering_color="White")
+                               text_input="LeveL 5", font=get_font(75), base_color=basecolour4, hovering_color="White")
 
         level6_button = Button(image=pygame.image.load("Images/Rects/Map Rect.png"), pos=(950, 250),
-                               text_input="LeveL 6", font=get_font(75), base_color="#d7fcd4", hovering_color="White")
+                               text_input="LeveL 6", font=get_font(75), base_color=basecolour5, hovering_color="White")
 
         level7_button = Button(image=pygame.image.load("Images/Rects/Map Rect.png"), pos=(950, 400),
-                               text_input="LeveL 7", font=get_font(75), base_color="#d7fcd4", hovering_color="White")
+                               text_input="LeveL 7", font=get_font(75), base_color=basecolour6, hovering_color="White")
 
         back_button = Button(image=pygame.image.load("Images/Rects/Quit Rect.png"), pos=(950, 550),
                              text_input="BACK", font=get_font(75), base_color="#d7fcd4", hovering_color="White")
