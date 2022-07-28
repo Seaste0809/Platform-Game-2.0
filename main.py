@@ -1356,7 +1356,7 @@ def free_play_normal(segment):
                     ENEMY_BULLETS.remove(bullet)
                 if bullet.colliderect(player):
                     wasted()
-                    levels_window()
+                    free_play_window()
 
 
 
