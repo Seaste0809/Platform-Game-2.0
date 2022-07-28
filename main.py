@@ -1534,7 +1534,6 @@ def main(Map):
                     shoot_sound()
                 previous_time = current_time
 
-        print(enemy_list)
         timer.tick(60)
 
 
